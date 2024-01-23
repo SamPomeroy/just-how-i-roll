@@ -163,41 +163,41 @@ const median = function(arr){
   }
 }
 
-// const mode = function(array) {
-//    const counts = {};
-//   for (const element of array) {
-//     if (counts[element]) {
-//       counts[element]++;
-//     } else {
-//       counts[element] = 1;
-//     }
-//   }
-//   let maxCount = 0;
-//   let mode;
-//   for (const [element, count] of Object.entries(counts)) {
-//     if (count > maxCount) {
-//       maxCount = count;
-//       mode = element;
+const mode = function(array) {
+   const counts = {};
+  for (const element of array) {
+    if (counts[element]) {
+      counts[element]++;
+    } else {
+      counts[element] = 1;
+    }
+  }
+  let maxCount = 0;
+  let mode;
+  for (const [element, count] of Object.entries(counts)) {
+    if (count > maxCount) {
+      maxCount = count;
+      mode = element;
       
+    }
+  }
+  return mode;
+}
+// const mode = function(arr){
+//   const frequencyMap = new Map()
+//   for (const element of arr) {
+//     if(!frequencyMap.has(element)){
+//       frequencyMap.set(element, 0)
+//     }
+//     frequencyMap.set(element, frequencyMap.get(element) + 1)
+//   }
+//   let mode = null
+//   let maxFrequency = 0
+//   for (const [element, frequency] of frequencyMap){
+//     if(frequency > maxFrequency){
+//       mode = element
+//       maxFrequency = frequency
 //     }
 //   }
-//   return mode;
-// }
-const mode = function(arr){
-  const frequencyMap = new Map()
-  for (const element of arr) {
-    if(!frequencyMap.has(element)){
-      frequencyMap.set(element, 0)
-    }
-    frequencyMap.set(element, frequencyMap.get(element) + 1)
-  }
-  let mode = null
-  let maxFrequency = 0
-  for (const [element, frequency] of frequencyMap){
-    if(frequency > maxFrequency){
-      mode = element
-      maxFrequency = frequency
-    }
-  }
-  return mode
-} 
+//   return mode
+// } 
